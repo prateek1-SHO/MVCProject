@@ -1,4 +1,6 @@
+using AutoMapper;
 using Mango.Services.ProductAPI.DBContexts;
+using Mango.Services.ProductAPI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,7 +31,10 @@ namespace Mango.Services.ProductAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplictionDbContexts>(option => option.UseSqlServer(Configuration.GetConnectionString("BloggingDatabase")));
-
+            IMapper mapper = MappingCongfiguration.RegisterMapp().CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddScoped<IProductReposioty, ProductRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
