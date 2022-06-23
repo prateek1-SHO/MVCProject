@@ -18,9 +18,19 @@ namespace Mango.Services.ProductAPI.Repository
             dbCon = dbtos;
             mapper = _mapper;
         }
-        public Task<ProductDtos> CreateProductDtos(ProductDtos ProductDtos)
+        public async Task<ProductDtos> CreateProductDtos(ProductDtos ProductDtos)
         {
-            Product product = mapper.Map(ProductDtos,Product)  
+            Product product = mapper.Map<ProductDtos, Product>(ProductDtos);
+            if (product.ProductID>0)
+            {
+                dbCon.Products.Update(product);
+            }
+            else
+            {
+              dbCon.Products.Add(product);
+            }
+            await dbCon.SaveChangesAsync();
+            return mapper.Map<Product,ProductDtos>(product);
         }
 
         public async Task<bool> DeleteProductDtos(int productID)
