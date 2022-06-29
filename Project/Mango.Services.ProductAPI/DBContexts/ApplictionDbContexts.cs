@@ -11,5 +11,48 @@ namespace Mango.Services.ProductAPI.DBContexts
         }
 
         public DbSet<Product> Products { get; set; }
+        protected override void OnModelCreating( ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>().HasData(new Product
+            {
+                ProductID = 1,
+                ProductName = "Prateek",
+                ProductDescription = " aeejwefjiwrnrnwe",
+                Price = 24,
+                ImageUrl = "",
+                CotegoryName = "Apptizer"
+
+            });
+            modelBuilder.Entity<Product>().HasData(new Product
+            {
+                ProductID = 2,
+                ProductName = "Prateek",
+                ProductDescription = " aeejwefjiwrnrnwe",
+                Price = 24,
+                ImageUrl = "",
+                CotegoryName = "Apptizer"
+
+            });
+            modelBuilder.Entity<Product>().HasData(new Product
+            {
+                ProductID = 3,
+                ProductName = "Prateek",
+                ProductDescription = " aeejwefjiwrnrnwe",
+                Price = 24,
+                ImageUrl = "",
+                CotegoryName = "Apptizer"
+
+            });
+            modelBuilder.Entity<Product>().HasData(new Product
+            {
+                ProductID = 4,
+                ProductName = "Raman Singh",
+                ProductDescription = " aeejwefjiwrnrnwe",
+                Price = 24,
+                ImageUrl = "",
+                CotegoryName = "Apptizer"
+
+            });
+        }
     }
 }

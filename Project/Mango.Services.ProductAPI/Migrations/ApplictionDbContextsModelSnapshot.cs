@@ -48,6 +48,44 @@ namespace Mango.Services.ProductAPI.Migrations
                     b.HasKey("ProductID");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductID = 1,
+                            CotegoryName = "Apptizer",
+                            ImageUrl = "",
+                            Price = 24.0,
+                            ProductDescription = " aeejwefjiwrnrnwe",
+                            ProductName = "Prateek"
+                        },
+                        new
+                        {
+                            ProductID = 2,
+                            CotegoryName = "Apptizer",
+                            ImageUrl = "",
+                            Price = 24.0,
+                            ProductDescription = " aeejwefjiwrnrnwe",
+                            ProductName = "Prateek"
+                        },
+                        new
+                        {
+                            ProductID = 3,
+                            CotegoryName = "Apptizer",
+                            ImageUrl = "",
+                            Price = 24.0,
+                            ProductDescription = " aeejwefjiwrnrnwe",
+                            ProductName = "Prateek"
+                        },
+                        new
+                        {
+                            ProductID = 4,
+                            CotegoryName = "Apptizer",
+                            ImageUrl = "",
+                            Price = 24.0,
+                            ProductDescription = " aeejwefjiwrnrnwe",
+                            ProductName = "Raman Singh"
+                        });
                 });
 #pragma warning restore 612, 618
         }
