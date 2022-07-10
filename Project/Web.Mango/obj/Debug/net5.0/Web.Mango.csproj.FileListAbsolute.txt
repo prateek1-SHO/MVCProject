@@ -354,3 +354,4 @@ C:\Prateek\DevopsGitReaning\git-project\Project\Web.Mango\obj\Debug\net5.0\refin
 C:\Prateek\DevopsGitReaning\git-project\Project\Web.Mango\obj\Debug\net5.0\Web.Mango.pdb
 C:\Prateek\DevopsGitReaning\git-project\Project\Web.Mango\obj\Debug\net5.0\Web.Mango.genruntimeconfig.cache
 C:\Prateek\DevopsGitReaning\git-project\Project\Web.Mango\obj\Debug\net5.0\ref\Web.Mango.dll
+C:\Prateek\DevopsGitReaning\git-project\Project\Web.Mango\bin\Debug\net5.0\Newtonsoft.Json.dll
